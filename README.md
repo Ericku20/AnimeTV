@@ -1,5 +1,5 @@
 # AnimeTV
-=======
+
 # 🎬 AnimeTV - Plataforma de Streaming de Anime
 
 Una plataforma profesional, escalable y lista para producción de streaming de anime. Inspirada en Netflix y Crunchyroll, con navegación tipo Smart TV.
@@ -368,4 +368,3 @@ Para problemas o preguntas, abre un issue en GitHub.
 ---
 
 **¡Disfruta viendo anime! 🎬**
->>>>>>> 5b4fa9e (Primer commit 🚀)
