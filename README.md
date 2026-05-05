@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # AnimeTV
 =======
 # 🎬 AnimeTV - Plataforma de Streaming de Anime
