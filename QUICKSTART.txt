@@ -1,0 +1,290 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                                                                           ║
+║                  🎬 ANIMETV - STREAMING DE ANIME v1.0.0                  ║
+║                 Plataforma Profesional Lista para Producción              ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+📋 ÍNDICE RÁPIDO
+═══════════════════════════════════════════════════════════════════════════
+
+1. INSTALACIÓN RÁPIDA
+2. ESTRUCTURA DEL PROYECTO
+3. COMANDOS PRINCIPALES
+4. CARACTERÍSTICAS IMPLEMENTADAS
+5. DOCUMENTACIÓN
+6. PRÓXIMOS PASOS
+7. SOPORTE Y CONTACTO
+
+═══════════════════════════════════════════════════════════════════════════
+
+🚀 1. INSTALACIÓN RÁPIDA
+═══════════════════════════════════════════════════════════════════════════
+
+Opción A - Script automático (RECOMENDADO):
+────────────────────────────────────────
+  bash setup.sh
+
+Opción B - Manual:
+──────────────────
+  1. npm install
+  2. cp backend/.env.example backend/.env.local
+  3. cp frontend/.env.example frontend/.env.local
+  4. npm run dev
+
+✅ Verificación:
+  - Frontend: http://localhost:3000
+  - Backend:  http://localhost:3001
+
+═══════════════════════════════════════════════════════════════════════════
+
+📁 2. ESTRUCTURA DEL PROYECTO
+═══════════════════════════════════════════════════════════════════════════
+
+AnimeTV/
+├── backend/                    # Servidor Express + proxy
+│   ├── src/
+│   │   ├── index.ts           # Servidor principal
+│   │   ├── routes/            # Rutas de API
+│   │   ├── controllers/       # Controladores
+│   │   ├── services/          # Lógica de negocio
+│   │   └── middlewares/       # Manejo de errores
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── frontend/                   # Aplicación Next.js
+│   ├── app/
+│   │   ├── page.tsx           # Home
+│   │   ├── search/            # Búsqueda
+│   │   ├── anime/             # Detalles
+│   │   ├── favorites/         # Favoritos
+│   │   ├── components/        # Componentes reutilizables
+│   │   ├── services/          # API client + Storage
+│   │   ├── store/             # Zustand store
+│   │   ├── hooks/             # Custom hooks
+│   │   ├── types/             # TypeScript types
+│   │   └── globals.css        # Estilos globales
+│   ├── next.config.js
+│   ├── tailwind.config.js
+│   └── tsconfig.json
+│
+├── package.json               # Workspace root
+├── README.md                  # Documentación principal
+├── API.md                     # Documentación de API
+├── DEVELOPMENT.md            # Guía de desarrollo
+├── SMARTTV.md                # Guía Smart TV
+├── TROUBLESHOOTING.md        # Solución de problemas
+├── CONTRIBUTING.md           # Guía de contribución
+├── ROADMAP.md                # Futuro del proyecto
+└── setup.sh                  # Script de instalación
+
+═══════════════════════════════════════════════════════════════════════════
+
+⚙️ 3. COMANDOS PRINCIPALES
+═══════════════════════════════════════════════════════════════════════════
+
+DESARROLLO:
+───────────
+  npm run dev              # Inicia Frontend + Backend
+  npm run dev:frontend     # Solo frontend
+  npm run dev:backend      # Solo backend
+
+PRODUCCIÓN:
+───────────
+  npm run build            # Compila para producción
+  npm start                # Inicia en producción
+
+CALIDAD DE CÓDIGO:
+──────────────────
+  npm run lint             # Ejecuta linter
+  npm run type-check       # Verifica tipos TypeScript
+  npm run format           # Formatea código
+
+═══════════════════════════════════════════════════════════════════════════
+
+✨ 4. CARACTERÍSTICAS IMPLEMENTADAS
+═══════════════════════════════════════════════════════════════════════════
+
+🎨 INTERFAZ:
+  ✅ Diseño moderno estilo Netflix/Crunchyroll
+  ✅ Modo oscuro por defecto
+  ✅ Animaciones fluidas (Framer Motion)
+  ✅ Skeleton loaders
+  ✅ Hover effects y transiciones
+  ✅ Responsivo (móvil, tablet, desktop, Smart TV)
+
+🔍 BÚSQUEDA:
+  ✅ Búsqueda en tiempo real con debounce
+  ✅ Resultados en grid
+  ✅ Infinite scroll
+  ✅ Múltiples páginas
+  ✅ Filtros inteligentes
+
+📺 REPRODUCTOR:
+  ✅ Reproducción HLS con hls.js
+  ✅ Controles grandes (TV friendly)
+  ✅ Selector de calidad (auto/720p/1080p)
+  ✅ Selector de servidor
+  ✅ Subtítulos (activar/desactivar)
+  ✅ Pantalla completa
+  ✅ Barra de progreso interactiva
+  ✅ Volumen y mute
+
+🎮 NAVEGACIÓN SMART TV:
+  ✅ Flechas direccionales (↑ ↓ ← →)
+  ✅ Seleccionar con Enter
+  ✅ Navegación tipo grid
+  ✅ Enfoque visual claro (ring + escala)
+  ✅ Scroll automático
+
+❤️ USUARIO (Sin Login):
+  ✅ Favoritos (guardados localmente)
+  ✅ Continuar viendo
+  ✅ Historial de visualización
+  ✅ Opciones del reproductor persistentes
+
+⚡ OPTIMIZACIÓN:
+  ✅ Lazy loading de imágenes
+  ✅ Code splitting automático
+  ✅ Caché de resultados
+  ✅ Compresión de datos
+  ✅ SSR + CSR híbrido
+
+🔐 SEGURIDAD:
+  ✅ CORS configurado
+  ✅ Rate limiting (100 req/15 min)
+  ✅ Validación de inputs
+  ✅ Manejo de errores centralizado
+  ✅ Sin exposición de API directa
+
+═══════════════════════════════════════════════════════════════════════════
+
+📚 5. DOCUMENTACIÓN
+═══════════════════════════════════════════════════════════════════════════
+
+Documentos Disponibles:
+─────────────────────
+  📄 README.md              → Descripción general
+  📄 API.md                 → Endpoints y documentación de API
+  📄 DEVELOPMENT.md         → Guía para desarrolladores
+  📄 SMARTTV.md             → Guía de navegación en Smart TV
+  📄 TROUBLESHOOTING.md     → Solución de problemas comunes
+  📄 CONTRIBUTING.md        → Cómo contribuir al proyecto
+  📄 ROADMAP.md             → Futuro del proyecto
+
+Lectura Recomendada:
+────────────────────
+  1. Lee README.md primero
+  2. Para desarrollo, lee DEVELOPMENT.md
+  3. Para Smart TV, lee SMARTTV.md
+  4. Para problemas, consulta TROUBLESHOOTING.md
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎯 6. PRÓXIMOS PASOS
+═══════════════════════════════════════════════════════════════════════════
+
+INMEDIATO (Ahora):
+──────────────────
+  1. npm install              # Instalar dependencias
+  2. npm run dev              # Iniciar desarrollo
+  3. Abrir http://localhost:3000 en navegador
+
+CONFIGURACIÓN (Primero):
+────────────────────────
+  1. Revisa backend/.env.local
+  2. Revisa frontend/.env.local
+  3. Verifica puertos (3000, 3001) disponibles
+
+EXPLORACION (Siguiente):
+────────────────────────
+  1. Navega por la aplicación
+  2. Prueba búsqueda
+  3. Intenta control remoto (flechas + Enter)
+
+DESARROLLO (Después):
+─────────────────────
+  1. Lee DEVELOPMENT.md
+  2. Explora el código
+  3. Haz cambios
+  4. Commit y push
+
+═══════════════════════════════════════════════════════════════════════════
+
+🆘 7. SOPORTE Y CONTACTO
+═══════════════════════════════════════════════════════════════════════════
+
+¿PROBLEMAS?
+──────────
+  1. Lee TROUBLESHOOTING.md
+  2. Limpia node_modules y reinstala
+  3. Revisa la consola del navegador (F12)
+  4. Verifica que backend esté corriendo
+
+REPORTAR BUG:
+─────────────
+  1. Abre un issue en GitHub
+  2. Incluye: OS, navegador, Node.js version
+  3. Adjunta logs y capturas
+
+SUGERIR MEJORA:
+───────────────
+  1. Abre una discussion
+  2. Describe el caso de uso
+  3. Explica qué problema resuelve
+
+CONTRIBUIR:
+───────────
+  1. Lee CONTRIBUTING.md
+  2. Fork el repositorio
+  3. Crea una rama
+  4. Haz cambios
+  5. Crea Pull Request
+
+═══════════════════════════════════════════════════════════════════════════
+
+📞 INFORMACIÓN RÁPIDA
+═══════════════════════════════════════════════════════════════════════════
+
+URLs:
+  Frontend:   http://localhost:3000
+  Backend:    http://localhost:3001
+  Health:     http://localhost:3001/health
+
+Puertos:
+  3000  → Next.js (Frontend)
+  3001  → Express (Backend)
+
+Stack:
+  Frontend:   Next.js 14 + React 18 + TypeScript + TailwindCSS
+  Backend:    Node.js + Express + TypeScript
+  Storage:    localStorage (sin backend)
+  API:        Anime1v API proxy
+
+Créditos:
+  API de Anime1v por FxxMorgan
+  Componentes con Framer Motion
+  Estilos con TailwindCSS
+
+═══════════════════════════════════════════════════════════════════════════
+
+🎉 ¡LISTO PARA EMPEZAR!
+═══════════════════════════════════════════════════════════════════════════
+
+Ejecuta esto ahora:
+
+  npm run dev
+
+Luego abre:
+
+  http://localhost:3000
+
+¡Disfruta! 🎬📺🍿
+
+═══════════════════════════════════════════════════════════════════════════
+
+Última actualización: Mayo 2024
+Versión: 1.0.0
+Estado: Production Ready ✅
+
+═══════════════════════════════════════════════════════════════════════════
